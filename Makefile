@@ -88,7 +88,7 @@ console3:
 
 cleanpyc:
 	find . -name *.pyc -exec rm {} \;
-	find . -name __pycache__ -exec rm -rf {} \;
+	find . -name __pycache__ -exec rm -rf {} \;  -prune
 
 clean: cleanpyc
 	rm -rf ${DOCS_DIR}
