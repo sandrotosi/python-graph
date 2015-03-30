@@ -10,6 +10,8 @@ TESTS_DIR="tests/"
 DOCS_DIR="docs/"
 TEMP="temp/"
 PYTHONPATH="`pwd`/core:`pwd`/dot"
+PYTHON=python
+PYTHON3=python3
 
 
 # General ------------------------------------------------------------
@@ -67,10 +69,10 @@ test-pre:
 	reset
 
 test: test-pre
-	export PYTHONPATH=${PYTHONPATH} && cd ${TESTS_DIR} && python testrunner.py
+	export PYTHONPATH=${PYTHONPATH} && cd ${TESTS_DIR} && ${PYTHON} testrunner.py
 
 test3: test-pre
-	export PYTHONPATH=${PYTHONPATH} && cd ${TESTS_DIR} && python3 testrunner.py
+	export PYTHONPATH=${PYTHONPATH} && cd ${TESTS_DIR} && ${PYTHON3} testrunner.py
 
 tests: test
 
